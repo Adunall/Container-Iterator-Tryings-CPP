@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+#include <list>
+int main() {
+    std::list<int> myList;
+    // Listeye değerler ekleme
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
+    myList.push_back(4);
+    myList.push_back(5);
+    auto result = std::find(myList.begin(), myList.end(), 3);
+    if (result != myList.end()) {
+        std::cout << "Değer bulundu: " << *result << std::endl;
+    } else {
+        std::cout << "Değer bulunamadı." << std::endl;
+    }
+    return 0;
+}
